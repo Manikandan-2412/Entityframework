@@ -71,3 +71,61 @@ IN EF THERE ARE THREE APPORACHES:
 2.code first
    the code
 3.model first
+
+
+assignment:
+=======
+https://drive.google.com/file/d/1UezgDrdCNz-DVzm7XBTdEggMfOmpcv9S/view
+======
+--------------------------------------------------------------------------------------------------
+Code first:
+-------
+No tables, no database no backend features are exisits
+we create classes and properties manually. and ef creates tables and columns accordingly.
+tables created automatically.
+
+
+Advantage of using code first
+-----------------------------
+1. the user don't have to worry about backend.
+2. dbfirst is suitable for smaller projects and codefirst is suitable for larger project.
+3. in code first apporach you will have complete control over the program since most of things are managed manually.
+4. in the code first apporach no edmx file, no designer (all managed using context file and model file).
+5. code first approach is easy to migrate compared to database first approach.
+6. code first approach is easier to perform unit test compared to database first.
+7. code first approach supports commands,db first doesn't supports commands
+
+steps involved in code first
+-----------------------
+1.create context file.
+2.create model file.
+3. register the connection string in appsettings.config file
+4. create object of context file and initialize the values.
+
+varchar -> doesn't support unicode
+nvarchar -> supports unicode
+
+
+EnableMigrations:
+-----
+- by default interacting with sql server is disabled.
+- u cannot update any changes to sql server
+  Enable migration command allows to interact with sql server
+
+AddMigration
+- add all the changes.
+Update-Migraion
+- update the changes to the project
+
+  want to add new column :
+  -------
+  1. add new change
+  2. create new age propert
+  3. create migration file
+  4. run the update command
+Update-Database -TargetMigration migrationfilename
+-----------------------------------------------------------
+Validations:
+-------
+1. customer name should be only alphablets
+2. 
