@@ -125,7 +125,13 @@ Update-Migraion
   4. run the update command
 Update-Database -TargetMigration migrationfilename
 -----------------------------------------------------------
-Validations:
--------
-1. customer name should be only alphablets
-2. 
+POCO --> plain code clr objects
+the virtual navigation properties convention enables Lazy loading.
+lazy loading = true makes the parent object can make access of all record
+by setting false, it will not load child table records
+
+===================================================================================================
+Model-First approach:
+---------------
+it is a similar to code first
+Visual designer (edmx file)
